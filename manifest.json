@@ -1,0 +1,16 @@
+{
+  "name": "先查再造",
+  "display_name": "Research-First Task Compiler",
+  "version": "1.3.0",
+  "owner": "yangcyyang",
+  "updated_at": "2026-08-06",
+  "license": "MIT",
+  "status": "active",
+  "maturity_tier": "production",
+  "lifecycle_stage": "production",
+  "review_cadence": "quarterly",
+  "language": "zh-CN",
+  "summary": "Compile fuzzy requests into structured task cards and evidence-driven execution: research first, Gate approvals, minimum validation, then build.",
+  "entrypoint": "SKILL.md",
+  "aliases": ["rftc", "research-first-task-compiler", "research-first", "task-compiler"]
+}

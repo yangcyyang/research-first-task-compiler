@@ -1,0 +1,24 @@
+interface:
+  display_name: "先查再造 (Research-First Task Compiler)"
+  short_description: "Compile fuzzy requests into task cards plus evidence-driven execution: research first, then approve, then build."
+  default_prompt: "Use $research-first-task-compiler to compile this request: research existing solutions first, show me a review package and risk grade for a Gate decision, run a minimum validation, then produce an execution package."
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "claude"
+    - "generic"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "bash"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow-metadata-only"
+  degradation:
+    openai: "metadata-adapter"
+    claude: "neutral-source-plus-adapter"
+    generic: "neutral-source"
