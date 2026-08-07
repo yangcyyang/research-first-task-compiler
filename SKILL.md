@@ -14,7 +14,7 @@ triggers:
   - task-compiler
 metadata:
   author: generated-for-user
-  version: "1.3.0"
+  version: "1.3.1"
   language: zh-CN
 ---
 
@@ -95,6 +95,8 @@ Extract or infer:
 - expected reversibility and risk level
 
 Do not block on missing details unless they materially affect the solution. **Always display the completed task card in the main response with a new task-card version, then set workflow state to `Gate A — approval pending` and stop.** End with exactly one bounded request: `请回复：确认任务卡 TC-N / 修改：… / 补充：…`.
+
+**Optional model-runner suggestion（可选元数据，非 gate）**：任务卡可附带一行「建议执行模型」字段（见 [assets/task-card-template.md](assets/task-card-template.md) §0），按任务能力缺口给匹配建议：调研/聚合型 → 联网检索能力强的模型；视觉/出图型 → 图像能力模型；代码验证/执行型 → 代码能力模型；默认 → 当前模型不切换。它是可跳过的元数据，不是确认门槛；用户可在 Gate A 确认时一并决定（如 `确认任务卡 TC-N，用 XX 模型`），或保持当前模型。若切换执行者，应先读取 workflow-state 文件再继续，避免上下文断裂。推荐映射会随模型能力变化而过时，只作示例、不硬编码为规则。
 
 **Forbidden before Gate A passes:** web or repository research, candidate comparison, runtime validation, execution-package generation, implementation, or any external side effect. A request to “先调研” still produces the task card first; it does not skip Gate A. `修改` or `补充` creates a new task-card version and keeps Gate A pending; it cannot be interpreted as approval.
 

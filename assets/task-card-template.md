@@ -5,6 +5,12 @@
 - Task-card version: TC-N
 - Displayed in: [message/reference]
 
+## 0. Suggested runner model（可选，非 gate，可跳过）
+
+[按任务能力缺口给一句匹配建议，例如：调研/聚合型 → 联网检索强的模型；视觉/出图型 → 图像能力模型；代码验证/执行型 → 代码能力模型；默认 → 当前模型不切换。仅作建议，用户可在 Gate A 确认时一并决定或忽略。]
+
+- Suggested model: [模型名 / 默认当前模型]
+
 ## 1. Problem
 
 [What is happening and why it matters]
@@ -77,6 +83,7 @@
 Please reply with exactly one of:
 
 - `确认任务卡 TC-N` — approve this exact version and enter research
+- `确认任务卡 TC-N，用 XX 模型` — approve and switch runner model (optional, see §0)
 - `修改：…` — revise into TC-(N+1), then display it and remain pending
 - `补充：…` — add context into TC-(N+1), then display it and remain pending
 

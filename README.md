@@ -1,6 +1,6 @@
 # research-first-task-compiler
 
-Version **1.3.0** makes both conversation gates version- and presentation-bound: only the current displayed task card can pass Gate A, and only a post-display selection of the current review package can pass Gate B.
+Version **1.3.1** adds an optional, non-gating "suggested runner model" hint to the task card (§0), so a task can carry a capability-matched model recommendation without adding a new approval gate. Version **1.3.0** makes both conversation gates version- and presentation-bound: only the current displayed task card can pass Gate A, and only a post-display selection of the current review package can pass Gate B.
 
 The portable Agent Skill turns concise natural-language project requests into this workflow:
 
