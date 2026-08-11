@@ -1,7 +1,7 @@
 interface:
   display_name: "先查再造 (Research-First Task Compiler)"
-  short_description: "Compile fuzzy requests into task cards plus evidence-driven execution: research first, then approve, then build."
-  default_prompt: "Use $research-first-task-compiler to compile this request: research existing solutions first, show me a review package and risk grade for a Gate decision, run a minimum validation, then produce an execution package."
+  short_description: "Compile fuzzy requests into a task card, research first, present a one-screen option card, then hand off to plan mode."
+  default_prompt: "Use $research-first-task-compiler to compile this request: confirm a task card with me first, research existing solutions and quick-read finalist projects, then show me a one-screen option card with your recommendation. After I choose, generate a plan-mode handoff package."
 compatibility:
   canonical_format: "agent-skills"
   adapter_targets:

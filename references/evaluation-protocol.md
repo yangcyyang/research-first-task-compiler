@@ -40,23 +40,26 @@ Use [../assets/golden-eval-cases.md](../assets/golden-eval-cases.md).
 
 Check:
 
-- 3–5 serious candidates, not link dumping
+- finalists were actually quick-read (README, docs, code structure, license, issues), not link dumping
+- 1–2 presented directions, no filler options
 - official sources for critical claims
 - current maintenance date
 - license verified
 - facts vs inference vs runtime evidence separated
 - recommendation names reuse/modify/build boundaries
-- minimum validation questions are falsifiable
+- spike questions are falsifiable and time-boxed
 
-## Evaluation of review packages
+## Evaluation of option cards
 
 Check:
 
 - one-sentence conclusion is consistent with evidence
+- each option states reused foundation, self-built scope, and evidence basis
+- each option line has a choose-it-if condition and risk light
 - all yellow/red/gray items are surfaced
-- no critical detail appears only in an appendix
-- human questions are bounded and answerable
-- detailed artifact location is provided
+- no critical detail appears only in the files
+- the human question is bounded and answerable
+- detailed artifact locations are provided for follow-up expansion
 
 ## Model judge rules
 

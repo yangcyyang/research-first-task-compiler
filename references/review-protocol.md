@@ -2,25 +2,29 @@
 
 ## Goal
 
-Reduce human review load without hiding important uncertainty. Transform large agent outputs into a small, evidence-backed decision surface.
+Reduce human review load without hiding important uncertainty. Transform research output into a one-screen option card the user can decide from without follow-up reading.
 
-## 1. Producer self-check
+## 1. Producer self-check (always)
 
 The producer must verify:
 
 - alignment with the latest task card
-- required sections and deliverables
-- source and evidence completeness
+- every option states reused foundation, self-built scope, and evidence basis
+- 1–2 genuine directions; no filler options
 - separation of facts, inference, assumptions, and runtime verification
 - contradictions, duplicated claims, and missing alternatives
 - scope expansion
 - known risks and untested items
 
-Self-check is necessary but is not independent validation.
+## 2. Independent reviewer (risk-triggered, not default)
 
-## 2. Independent reviewer
+Trigger an independent reviewer (different agent, model, or isolated context) only when:
 
-Use a different agent, model, or isolated context when available. Give the reviewer:
+- any Red direction is presented
+- the decision is high-cost or hard to reverse
+- producer evidence conflicts or confidence is low
+
+Give the reviewer:
 
 - task card and acceptance criteria
 - producer artifact
@@ -48,40 +52,21 @@ Before using an LLM reviewer, run available objective checks:
 - required fields and schema validation
 - URL and repository existence
 - date/version consistency
-- calculations and table totals
 - license file presence
-- build, lint, type, unit, integration, and smoke tests
 - duplicate and broken-reference detection
 
 LLM review should focus on judgment that cannot be checked mechanically.
 
-## 4. Evidence sampling
-
-For large repetitive outputs:
-
-- verify all red-risk items
-- verify all yellow decision items
-- sample green items according to task risk
-- increase sample size when errors are found
-
-Suggested starting sample:
-
-- low-risk repetitive work: 5–10%
-- medium-risk work: key items plus 20%
-- high-risk or irreversible work: 100%
-
-Sampling is not appropriate for architecture decisions, security boundaries, destructive actions, contracts, or production migrations.
-
-## 5. Review package
+## 4. Option card
 
 Use [../assets/review-package-template.md](../assets/review-package-template.md).
 
-Keep the decision surface short. Detailed output remains accessible but is not the default reading path.
+The card carries only: 概要结论, 方案目录（一行一个方案）, 需要你决定的, 风险灯, 详细材料位置. Detailed output remains in files and is the source for any follow-up expansion — never improvise expansions.
 
-## 6. Reviewer integrity rules
+## 5. Reviewer integrity rules
 
 - Treat unavailable evidence as gray, not green.
 - Do not infer runtime success from documentation.
 - Do not use a numeric score to override a critical failure.
 - State disagreements between producer and reviewer.
-- When reviewer confidence is low, request a targeted test rather than more prose.
+- When reviewer confidence is low, request a targeted check rather than more prose.

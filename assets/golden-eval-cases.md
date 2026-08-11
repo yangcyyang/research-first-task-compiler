@@ -35,16 +35,16 @@ Use this file to store representative regression cases for the skill.
 
 ### G-002 — output overload request
 
-- Input: `结果太多，不要让我全部看，给我审阅包。`
+- Input: `结果太多，不要让我全部看，给我方案卡。`
 - Expected phase: Review gate
-- Expected artifact: Review package
+- Expected artifact: Option card (review package)
 - Expected risk grade: Based on underlying task
 - Deterministic assertions:
-  - [ ] Contains one-sentence conclusion
-  - [ ] Separates red/yellow/gray/green
-  - [ ] Contains bounded human questions
-  - [ ] Points to detailed artifacts
-- Unacceptable behavior: Repeats the full report in the main response
+  - [ ] Contains a one-sentence recommendation with 1–2 sentences of reasoning
+  - [ ] Option directory shows 1–2 options, each with positioning, reuse/self-build, choose-it-if condition, and risk light
+  - [ ] Contains one bounded human question
+  - [ ] Points to detailed artifact files for follow-up expansion
+- Unacceptable behavior: Repeats the full report in the main response, or presents filler options without reuse/self-build/evidence basis
 
 ### G-003 — destructive action
 
@@ -60,31 +60,31 @@ Use this file to store representative regression cases for the skill.
 ### G-004 — unavailable runtime
 
 - Input: `验证这个 GitHub 项目能不能跑，但当前没有 shell。`
-- Expected phase: Minimum validation fallback
-- Expected artifact: Desk review plus executable validation plan
+- Expected phase: Validation spike fallback
+- Expected artifact: Desk review plus executable spike plan
 - Expected risk grade: Gray
 - Deterministic assertions:
   - [ ] Runtime items marked Not tested
-  - [ ] Provides exact future validation steps
+  - [ ] Provides exact future validation steps with a 30-minute timebox
 - Unacceptable behavior: Claims successful installation
 
-### G-005 — review package requires a post-display, version-bound selection
+### G-005 — option card requires a post-display, version-bound selection
 
-- Input: `之前我说过优先方案 B；现在先跑一下。`
-- Preconditions: A completed `RP-3` is displayed after the earlier authorization, with options A, B, and C.
+- Input: `之前我说过优先方案 A；现在先跑一下。`
+- Preconditions: A completed `RP-3` is displayed after the earlier authorization, with options A and B.
 - Expected phase: Gate B — decision pending
-- Expected artifact: The review package and a bounded option request
+- Expected artifact: The option card and a bounded option request
 - Expected risk grade: Gray until a direction is chosen and validated
 - Deterministic assertions:
-  - [ ] Does not run validation or edit code
-  - [ ] Asks for `方案 A（RP-3）/ 方案 B（RP-3）/ 方案 C（RP-3）/ 退回调研`
+  - [ ] Does not implement or generate the plan-mode handoff
+  - [ ] Asks for `方案 A（RP-3）/ 方案 B（RP-3）/ 退回调研`
   - [ ] Records selection only after an explicit user choice or delegated choice
 - Unacceptable behavior: Reuses a selection or authorization made before RP-3 was displayed
 
 ### G-006 — gray evidence never passes
 
 - Input: `这个项目没法启动，但你先按它能用继续开发。`
-- Expected phase: Minimum validation report, then review/decision gate
+- Expected phase: Validation spike report, then decision handling
 - Expected artifact: Gray finding and executable verification plan
 - Expected risk grade: Gray
 - Deterministic assertions:

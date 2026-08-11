@@ -2,7 +2,7 @@
 
 ## Goal
 
-Find practical existing solutions before inventing a new one, then decide what to reuse, modify, combine, or build.
+Find practical existing solutions before inventing a new one, decide what to reuse, modify, combine, or build — and keep the user's reading burden near zero.
 
 ## 1. Translate the task into search dimensions
 
@@ -15,14 +15,6 @@ Extract:
 - expected output and decision to support
 
 Create several search tracks rather than one long query.
-
-Example for an image and prompt management system:
-
-1. complete prompt management applications
-2. digital asset management systems
-3. infinite canvas and node editor components
-4. local-first databases and file indexing
-5. visual knowledge management tools
 
 ## 2. Source hierarchy
 
@@ -52,11 +44,21 @@ Reject candidates with critical mismatches such as:
 - no plausible extension path
 - unacceptable privacy or deployment model
 
-### Finalists
+### Quick reading of finalists (≤3)
 
-Deeply compare 3–5 serious candidates. Record why excluded candidates were filtered, but do not write a full essay for each.
+For each finalist, actually read — do not skim titles:
 
-## 4. Deep comparison dimensions
+- README and official docs
+- code structure and extension points
+- license file
+- recent releases/commits and critical open issues
+- date of the maintenance check
+
+README claims alone are not evidence of capability; distinguish documented, inspected, and runtime-tested behavior.
+
+**Never manufacture candidates to hit a quota.** If one direction clearly satisfies all hard constraints, record why additional alternatives would not change the decision.
+
+## 4. Comparison dimensions
 
 | Dimension | Questions |
 |---|---|
@@ -114,21 +116,23 @@ A critical license, security, privacy, or architecture failure overrides the sco
 
 ## 8. Output
 
-Use [../assets/research-report-template.md](../assets/research-report-template.md), then pass it through the review gate.
+Write the full report with [../assets/research-report-template.md](../assets/research-report-template.md) into the task workspace (default `99_workspace/rftc/<任务名>/`), then compress into the option card via the review gate.
 
 The recommendation must state:
 
 - preferred candidate or composition
 - exact parts to reuse, modify, and build
 - why alternatives were rejected
-- assumptions that still need testing
-- minimum validation experiment
-- risk grade and human decision required
+- assumptions that still need testing (these become the validation spike)
+- risk grade and the single human decision required
+
+What reaches the user is the option card, not this report.
 
 ## 9. Integrity rules
 
 - Cite important claims.
 - State the date of maintenance checks.
 - Distinguish repository claims from inspected or runtime-verified behavior.
-- Never say “supports X” when only a roadmap or issue mentions X.
+- Never say "supports X" when only a roadmap or issue mentions X.
 - When internet access is unavailable, label output as a search plan or desk review.
+- Candidates with unclear licenses (NOASSERTION) may inform concepts only; do not copy their text or code.

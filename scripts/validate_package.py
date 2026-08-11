@@ -51,8 +51,8 @@ def main() -> int:
                 continue
             if not (root / rel).exists():
                 errors.append(f"broken SKILL.md reference: {rel}")
-        if 'version: "1.3.0"' not in front:
-            errors.append("SKILL.md must declare version 1.3.0")
+        if 'version: "1.4.0"' not in front:
+            errors.append("SKILL.md must declare version 1.4.0")
         for trigger in ("先查再造", "research-first", "task-compiler"):
             if f"  - {trigger}" not in front:
                 errors.append(f"SKILL.md missing trigger: {trigger}")

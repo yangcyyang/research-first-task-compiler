@@ -21,8 +21,8 @@
 
 | Gate | Required user input | Blocks until passed | Status | Evidence |
 |---|---|---|---|---|
-| Gate A — task-card confirmation | `确认任务卡 TC-N` for the currently displayed card | Research, validation, packaging, implementation | Pending(TC-N) / Passed(TC-N) / Invalidated | Display ref + confirmation ref |
-| Gate B — review-package decision | Selection/delegation for currently displayed `RP-N` after its display | Validation, packaging, implementation | Pending(RP-N) / Passed(RP-N) / Invalidated | Display ref + selection ref |
+| Gate A — task-card confirmation | `确认任务卡 TC-N` for the currently displayed card | Research, plan-mode handoff, implementation | Pending(TC-N) / Passed(TC-N) / Invalidated | Display ref + confirmation ref |
+| Gate B — review-package decision | Selection/delegation for currently displayed `RP-N` after its display | Plan-mode handoff, implementation | Pending(RP-N) / Passed(RP-N) / Invalidated | Display ref + selection ref |
 
 Rules: Green does not bypass either gate. `修改`/`补充` never pass Gate A. An early authorization or old selection never passes Gate B. A material task-card change invalidates Gate A and all downstream artifacts; a material review-package change invalidates Gate B and downstream artifacts. Red requires a separate explicit approval before the named irreversible action.
 
@@ -40,9 +40,9 @@ Rules: Green does not bypass either gate. `修改`/`补充` never pass Gate A. A
 |---|---|---|---|
 | Task card | | | |
 | Research report | | | |
-| Review package | | | |
-| Validation report | | | |
-| Execution package | | | |
+| Option card (review package) | | | |
+| Plan-mode handoff | | | |
+| Validation spike report | | | |
 | Acceptance report | | | |
 
 ## Evidence and assumptions

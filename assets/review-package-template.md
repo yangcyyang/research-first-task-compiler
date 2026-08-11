@@ -1,68 +1,52 @@
-# Review Package — Gate B
+# 方案卡（Option Card / Review Package）— Gate B
 
-> This versioned package must be displayed in the main conversation. Do not validate, generate an execution package, or implement until the user explicitly chooses a direction from this current displayed version.
+> This versioned card must be displayed in full in the main conversation. Do not implement, deploy, generate the plan-mode handoff, or cause external side effects until the user explicitly chooses a direction from this current displayed version.
 
 - Review-package version: RP-N
 - Displayed in: [message/reference]
 
-## 1. One-sentence conclusion
+## 1. 概要结论
 
-[Recommended decision in one sentence]
+**推荐：方案 X** —— [一句话方案内容]
 
-## 2. Decision summary
+理由：[1~2 句，只说最关键的]
 
-| Item | Conclusion |
-|---|---|
-| Recommended direction | |
-| Reuse strategy | |
-| Strongest reason | |
-| Main risk | |
-| Next allowed action | |
+## 2. 方案目录
 
-## 3. Key evidence
+| 方案 | 一句话定位 | 复用 / 自研 | 选它如果… | 风险灯 |
+|---|---|---|---|---|
+| A（推荐） | | 复用：…；自研：… | | |
+| B | | 复用：…；自研：… | | |
 
-| Claim | Evidence | Evidence type | Confidence |
-|---|---|---|---|
-| | | Sourced / Inspected / Runtime-tested | High / Medium / Low |
+Option rules:
 
-## 4. Risk lights
+- 1–2 genuine directions only. Never add filler options.
+- If only one direction is reasonable, delete the second row and state why no second option exists.
+- Every option must state its reused foundation, self-built scope, and evidence basis; missing any of these, it is not selectable.
 
-### Red — explicit approval required
+## 3. 需要你决定的
 
-- None / ...
+[唯一的核心取舍问题，一句话]
 
-### Yellow — decision required
+请选择：`方案 A（RP-N）` / `方案 B（RP-N）` / `退回调研`
 
-- ...
+## 4. 风险灯
 
-### Gray — not verified
+只列有内容的灯；空灯整行删除。
 
-- ...
+- Red — 执行前需显式批准：
+- Yellow — 需要取舍：
+- Gray — 未验证：
 
-### Green — may proceed
+## 5. 详细材料
 
-- ...
+追问任一方案时从以下文件展开，不现编：
 
-## 5. Decision required from the human
+- 完整调研报告：
+- 证据账本：
+- 决策记录：
 
-Choose one for this exact version: `方案 A（RP-N）` / `方案 B（RP-N）` / `方案 C（RP-N）` / `退回调研`.
-
-1. [A bounded choice with recommendation]
-
-## 6. Reviewer verdict
-
-- Verdict: Accept / Accept with conditions / Revise / Reject
-- Reviewer concerns:
-- Required corrections:
-
-## 7. Detailed artifacts
-
-- Full research/report:
-- Evidence ledger:
-- Validation logs:
-- Decision record:
-
-## 8. Gate B status
+## 6. Gate B status
 
 - Status: Decision pending for RP-N
 - Next allowed action: Wait for a post-display explicit selection or delegated choice for RP-N
