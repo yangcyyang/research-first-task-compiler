@@ -1,16 +1,21 @@
 {
   "name": "先查再造",
-  "display_name": "Research-First Task Compiler",
-  "version": "1.3.1",
+  "display_name": "先查再造 · 闸门工作流 (Gated Research-First Workflow)",
+  "version": "2.0.0",
   "owner": "yangcyyang",
-  "updated_at": "2026-08-06",
+  "updated_at": "2026-08-12",
   "license": "MIT",
   "status": "active",
   "maturity_tier": "production",
   "lifecycle_stage": "production",
   "review_cadence": "quarterly",
   "language": "zh-CN",
-  "summary": "Compile fuzzy requests into structured task cards and evidence-driven execution: research first, Gate approvals, minimum validation, then build.",
+  "summary": "Merged gated workflow: Task/Solution/Result Cards + two fixed direction gates + three conditional gates (research, minimum validation, execution packaging), progressive disclosure, AI narrative constraint, baseline & delta-only review.",
   "entrypoint": "SKILL.md",
-  "aliases": ["rftc", "research-first-task-compiler", "research-first", "task-compiler"]
+  "aliases": [
+    "rftc",
+    "research-first-task-compiler",
+    "research-first",
+    "task-compiler"
+  ]
 }
