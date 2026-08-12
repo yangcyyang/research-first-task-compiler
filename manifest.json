@@ -1,7 +1,7 @@
 {
   "name": "先查再造",
   "display_name": "先查再造 · 闸门工作流 (Gated Research-First Workflow)",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "owner": "yangcyyang",
   "updated_at": "2026-08-12",
   "license": "MIT",

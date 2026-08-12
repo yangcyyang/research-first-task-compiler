@@ -2,10 +2,6 @@
 
 <!-- 叙事约束：先总概后拆分；按用户关注点排序，不按 AI 工作顺序；技术用语不上第一屏，必须出现时先翻译成业务语言 -->
 
-> 结果ID：{{RESULT_ID}}  
-> 状态：awaiting-acceptance  
-> 版本：{{VERSION}}
-
 ## 一句话结果
 
 {{ONE_SENTENCE_RESULT}}
